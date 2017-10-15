@@ -1,7 +1,11 @@
-.content Hello World!
+%h1 This is the Workouts#Index placeholder
+
 
 .workouts
     - @workout.each do |w|
-        %br
         .line
-        = w.category
+            = "Name: #{w.name}"
+            = "Category: #{w.category}"
+            = "Reps: #{w.reps}"
+            = "Progression: #{w.progression}"
+        %br
