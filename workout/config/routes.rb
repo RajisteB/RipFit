@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'workouts#index'
   post '/workouts' => 'workouts#create', as: 'create_workout'
   get '/workouts/category/:category' => 'workouts#category', as: 'category'
+  patch '/workouts/:id' => 'workouts#update', as: 'patch_workout'
 end

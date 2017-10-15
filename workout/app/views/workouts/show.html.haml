@@ -5,4 +5,6 @@
     = @workout.example
     = @workout.progression
 
-= link_to 'Home', root_path
+.edit
+    = link_to 'Edit', edit_workout_path(@workout) |
+    = link_to 'Home', root_path
