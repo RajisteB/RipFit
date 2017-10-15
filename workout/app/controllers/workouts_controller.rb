@@ -1,6 +1,8 @@
 class WorkoutsController < ApplicationController
     before_action :find_workout, only: [:show, :edit, :update, :destroy]
 
+    def home
+    end
 
     def index
         @workout = Exercise.all
@@ -40,6 +42,21 @@ class WorkoutsController < ApplicationController
 
     def category
         @workout = Exercise.where(category: (params[:category]))
+    end
+
+    def categories
+        @categories = [
+            "Warm Up",
+            "Core Warm Up",
+            "Support Progression",
+            "Handstand Progression",
+            "Pull-Up Progression",
+            "Dipping Progression",
+            "L-Sit Progression",
+            "Squat Progression",
+            "Push-Up Progression",
+            "Row Progression"
+        ]
     end
 
     private
