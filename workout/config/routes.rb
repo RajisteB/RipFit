@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :workouts
   root 'workouts#index'
   post '/workouts' => 'workouts#create', as: 'create_workout'
+  get '/workouts/category/:category' => 'workouts#category', as: 'category'
 end

@@ -4,8 +4,8 @@
 .workouts
     - @workout.each do |w|
         .line
-            = "Name: #{w.name}"
-            = "Category: #{w.category}"
-            = "Reps: #{w.reps}"
-            = "Progression: #{w.progression}"
+            %h2= link_to "#{w.name}", workout_path(w.id)
+            %h4= link_to "#{w.category}", category_path(w.category) 
+            %h6= "Reps: #{w.reps}"
+            %p= "#{w.progression}"
         %br

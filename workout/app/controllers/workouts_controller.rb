@@ -31,6 +31,10 @@ class WorkoutsController < ApplicationController
     def destroy
     end
 
+    def category
+        @workout = Exercise.where(category: (params[:category]))
+    end
+
     private
 
     def post_workout

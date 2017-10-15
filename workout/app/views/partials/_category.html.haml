@@ -1,0 +1,9 @@
+%h2 This is the categories page...
+
+- @workout.each do |i| 
+    %category
+        %h2= link_to "#{i.name}", workout_path(i.id)
+        %h4= "#{i.category}"
+        %h6= "Reps: #{i.reps}"
+        %p= "#{i.progression}"
+    %br
